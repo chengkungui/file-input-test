@@ -22,6 +22,7 @@ Test project for file input field
 
 3. Run protractor
 
-        node_modules/.bin/grunt protractor:test
+        node_modules/.bin/grunt protractor:firefox
+        node_modules/.bin/grunt protractor:chrome
 
     Note, this assumes that application is running at port 3000
