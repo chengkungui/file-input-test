@@ -2,7 +2,7 @@
 
 var path = require('path');
 
-describe("select file ", function () {
+describe("file input ", function () {
 
     var ptor;
 
