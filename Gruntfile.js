@@ -15,13 +15,21 @@ module.exports = function(grunt) {
                 noColor: false
             },
             firefox:{
-                capabilities: {
-                    'browserName': 'firefox'
+                options:{
+                    args: {
+                        capabilities: {
+                            'browserName': 'firefox'
+                        }
+                    }
                 }
             },
             chrome:{
-                capabilities: {
-                    'browserName': 'chrome'
+                options:{
+                    args: {
+                        capabilities: {
+                            'browserName': 'chrome'
+                        }
+                    }
                 }
             }
         }
