@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="fileInputTest">
+
+<div ng-controller="MainController">
+    <input id="input-file" type="file" multiple>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Size</th>
+            <th>Modified Time</th>
+        </tr>
+        <tr ng-repeat="file in files">
+            <td class="file-name">{{file.name}}</td>
+            <td class="file-size">{{file.size}}</td>
+            <td class="file-time">{{file.lastModifiedDate}}</td>
+        </tr>
+    </table>
+</div>
+
+
+<script src="https://code.angularjs.org/1.2.13/angular.min.js"></script>
+<script>
+    angular.module('fileInputTest', []).controller('MainController',['$scope',function($scope){
+
+        $scope.files = [];
+        var input = angular.element(document.getElementById('input-file'));
+
+        input.bind('change', function(event) {
+            $scope.files = [];
+            for (var i = 0; i < event.target.files.length; i++){
+                $scope.files.push(event.target.files[i]);
+            }
+            $scope.$digest();
+        });
+
+    }]);
+</script>
+</body>
+</html>
