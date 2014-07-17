@@ -10,13 +10,19 @@ module.exports = function(grunt) {
 
         protractor: {
             options:{
-                configFile: "node_modules/protractor/referenceConf.js",
+                configFile: "protractor.conf.js",
                 keepAlive: false,
                 noColor: false
             },
-            test:{
-                configFile: "protractor.conf.js",
-                noColor: false
+            firefox:{
+                capabilities: {
+                    'browserName': 'firefox'
+                }
+            },
+            chrome:{
+                capabilities: {
+                    'browserName': 'chrome'
+                }
             }
         }
     });
