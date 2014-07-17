@@ -13,6 +13,7 @@ Test project for file input field
 #### Running the e2e tests
 
 1. install node package
+
         npm install
 
 2. install the selenium web driver
@@ -21,6 +22,6 @@ Test project for file input field
 
 3. Run protractor
 
-        node_modules/.bin/grunt protractor
+        node_modules/.bin/grunt protractor:test
 
     Note, this assumes that application is running at port 3000
